@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <div id="studentID">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="studentID" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <label id="message" for="message">Message:</label>
+            <!--<p id="message"></p>-->
+        </form>
+
+       </div>
+
+        <a href="index.html">← Back to Website</a>
+
+    </div>
+
+    <script>
+                document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let studentID = document.getElementById("studentID").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            // Demo login details
+            if (studentID === "BU001" && password === "1234") {
+
+                message.textContent = "Login successful!";
+
+                setTimeout(function() {
+                    window.location.href = "student-dashboard.html";
+                }, 1000);
+
+            } else {
+
+                message.textContent = "Invalid Student ID or Password.";
+            }
+        });
+    </script>
+</body>
+</html>
