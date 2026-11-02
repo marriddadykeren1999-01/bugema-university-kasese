@@ -15,11 +15,15 @@
             <p1>"Exellence inservice"</p1></div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                 <li><a href= "#about">About</a></li>
-                 <li><a href="#admission">Admissions</a></li>
-              <li><a href="#porta">Student portal</a></li>
-             <li><a href="#contact">Contact</a></li>
+ <li><a href="#home">Home</a></li>
+ <li><a href= "#about">About</a></li>
+ <li><a href="#admission">Admissions</a></li>
+ <li><a href="https://erms.bugemauniv.ac.ug/student/login/">Student Portal</a></li>
+<li><a href="#registrar">Registrar's Office</a></li>
+<li><a href="#timetable">Students' Timetable</a></li>
+<li><a href="https://payments.bugemauniv.ac.ug/payments/">Business Office</a></li>
+<li><a href="#security">Security Office</a></li>
+   <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -28,7 +32,7 @@
     <div class="hero-content">
         <h2>Welcome To bugema University Kasese Campus</h2>
         <p>Empowering students through quality education, knowledge, skills and Christian values.</p>
-        <a href="#apply" class="button">Apply Now</a>
+        <a href="https://erms.bugemauniv.ac.ug/application/personal-info/?_gl=1*1d30cwg*_ga*MTI5MzEyMTI1Ny4xNzkxNzMwNzQx*_ga_S0CFXZCKPW*czE3OTE3MzA3NDEkbzEkZzEkdDE3OTE3MzExMjAkajM4JGwwJGgw/" class="button">Apply Now</a>
         <a href="#programs" class="button secondary">View Programs</a>
         <a href="https://www.bugemauniversitykasesecampus.ac.ug" class="button" target="_blank">Visit Our Website</a>
 
@@ -114,7 +118,7 @@
         </div>
     </div>
 
-    <a href="#" class="button">Start Application</a>
+    <a href="https://erms.bugemauniv.ac.ug/application/personal-info/" class="button">Start Application</a>
 </section>
 
 <section id="portal" class="section portal">
@@ -124,9 +128,164 @@
     <div class="portal-box">
         <h3>Access Student Portal</h3>
         <p>Log in to access your student information, courses, results and other services.</p>
-        <a href="login.html" class="button">Login to Student Portal</a>
+        <a href="https://erms.bugemauniv.ac.ug/student/login/" class="button">Login to Student Portal</a>
     </div>
 </section>
+    </div>
+</section>
+
+
+<!-- Security Office -->
+<section id="security" class="section office">
+    <h2>Security Office</h2>
+
+    <img src="security.jpg" alt="Security Office">
+
+    <p>
+        The Security Office is responsible for maintaining safety
+        and security for students, staff and visitors on campus.
+    </p>
+
+    <div class="office-contact">
+        <p><strong>Emergency Telephone:</strong> +256 </p>
+        <p><strong>Email:</strong> </p>
+        <p><strong>Location:</strong> Bugema University Kasese Campus</p>
+    </div>
+</section>
+
+    <div style="width:100%; height:450px;">
+    <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.497676876433!2d30.081!3d0.183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1764d8c8c0e0b0d1%3A0x0!2sBugema%20University%20Kasese%20Campus!5e0!3m2!1sen!2sug!4v0000000000000"idth="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</section>
+
+  <!-- WHOLE SCHOOL STUDENTS' TIMETABLE -->
+<section id="timetable" class="timetable-section">
+
+    <h2>Students' Timetable</h2>
+    <p>Bugema University - Kasese Campus</p>
+    <p>View class schedules for all programs and years.</p>
+
+    <label for="program">Select Program:</label>
+    <select id="program">
+        <option value="All">All Programs</option>
+        <option value="Certificate">Certificate</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Degree">Degree</option>
+        <option value="Other">Other Programs</option>
+    </select>
+
+    <label for="year">Select Year:</label>
+    <select id="year">
+        <option value="All">All Years</option>
+        <option value="Year 1">Year 1</option>
+        <option value="Year 2">Year 2</option>
+        <option value="Year 3">Year 3</option>
+        <option value="Year 4">Year 4</option>
+    </select>
+
+    <label for="semester">Select Semester:</label>
+    <select id="semester">
+        <option value="All">All Semesters</option>
+        <option value="Semester One">Semester One</option>
+        <option value="Semester Two">Semester Two</option>
+    </select>
+
+    <div class="timetable-table-container">
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th>Program</th>
+                    <th>Year</th>
+                    <th>Semester</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Course / Subject</th>
+                    <th>Lecturer</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+
+            <tbody id="timetableBody">
+                <!-- Timetable entries will appear here -->
+            </tbody>
+        </table>
+
+<div id="addLessonSection">
+    <h3>Add a New Lesson</h3>
+
+    <form id="addLessonForm">
+        <label for="newProgram">Program:</label>
+        <select id="newProgram" required>
+            <option value="">Choose Program</option>
+            <option value="Degree">Degree</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Certificate">Certificate</option>
+        </select>
+
+        <label for="newYear">Year:</label>
+        <select id="newYear" required>
+            <option value="">Choose Year</option>
+            <option value="Year 1">Year 1</option>
+            <option value="Year 2">Year 2</option>
+            <option value="Year 3">Year 3</option>
+            <option value="Year 4">Year 4</option>
+        </select>
+
+        <label for="newSemester">Semester:</label>
+        <select id="newSemester" required>
+            <option value="">Choose Semester</option>
+            <option value="Semester One">Semester One</option>
+            <option value="Semester Two">Semester Two</option>
+        </select>
+
+        <label for="newDay">Day:</label>
+        <select id="newDay" required>
+            <option value="">Choose Day</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+        </select>
+
+        <label for="newTime">Time:</label>
+        <input type="text" id="newTime"
+               placeholder="e.g. 9:00 AM - 11:00 AM" required>
+
+        <label for="newCourse">Course / Lesson:</label>
+        <input type="text" id="newCourse"
+               placeholder="Enter course name" required>
+
+        <label for="newLecturer">Lecturer:</label>
+        <input type="text" id="newLecturer"
+               placeholder="Enter lecturer's name" required>
+
+        <label for="newVenue">Venue:</label>
+        <input type="text" id="newVenue"
+               placeholder="e.g. Room 1" required>
+
+        <button type="submit">Add Lesson</button>
+    </form>
+
+    <p id="addLessonMessage"></p>
+</div>
+    </div>
+
+    <p id="timetableMessage">
+        Please select your program and year to find your timetable.
+    </p>
+
+</section>
+   <script src="script.js"></script>
+
 
 <section id="contact" class="section contact">
     <h2>Contact Us</h2>
@@ -138,15 +297,13 @@
         <p><strong>Email:</strong> bugemauniversity kasese campus@gmail.com</p>
         <p><strong>Telephone:</strong> +256773986250,+256779224245</p>
     </div>
-</section>
-
-<footer>
-    <p>© 2026 Bugema University ksese campus.</p>
-    <p>Designed by MARRIDDADY KEREN A STUDENT AT BUGEMA UNIVERSITY MAIN CAMPUS</p>
+ 
+    <footer>
+    <p>© 2026 Bugema University kasese campus.</p>
 </footer>
-
 </body>
 </html>
+
 
 
 
