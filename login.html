@@ -1,52 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bugema University - Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f0;
+            margin: 0;
+            padding: 40px 15px;
+        }
+
+        #studentLogin {
+            max-width: 350px;
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #cccccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0f9743;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0f9743;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .back {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-       <div id="studentID">
-        <h2>Login</h2>
+
+    <div id="studentLogin">
+        <h2>Student Login</h2>
+
         <form id="loginForm">
             <label for="username">Username:</label>
-            <input type="text" id="studentID" name="username" required>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
             <button type="submit">Login</button>
-            <label id="message" for="message">Message:</label>
-            <!--<p id="message"></p>-->
+
+            <p id="message" role="status"></p>
         </form>
 
-       </div>
-
-        <a href="index.html">← Back to Website</a>
-
+        <a class="back" href="index.html">
+            &larr; Back to Website
+        </a>
     </div>
 
     <script>
-                document.getElementById("loginForm").addEventListener("submit", function(event) {
+        const loginForm = document.getElementById("loginForm");
+        const message = document.getElementById("message");
 
+        loginForm.addEventListener("submit", function(event) {
             event.preventDefault();
 
-            let studentID = document.getElementById("studentID").value;
-            let password = document.getElementById("password").value;
-            let message = document.getElementById("message");
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
 
-            // Demo login details
-            if (studentID === "BU001" && password === "1234") {
-
-                message.textContent = "Login successful!";
-
-                setTimeout(function() {
-                    window.location.href = "student-dashboard.html";
-                }, 1000);
-
+            if (username === "student" && password === "12345") {
+                message.textContent = "Login successful! Welcome, student.";
+                message.style.color = "green";
             } else {
-
-                message.textContent = "Invalid Student ID or Password.";
+                message.textContent = "Incorrect username or password.";
+                message.style.color = "red";
             }
         });
     </script>
+
 </body>
 </html>
